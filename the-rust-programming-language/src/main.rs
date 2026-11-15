@@ -53,4 +53,21 @@ fn main() {
     };
     let black = chapter_5::structs::Color(0, 0, 0);
     let origin = chapter_5::structs::Point(0, 0, 0);
+
+    let scale = 2;
+
+    let rect1 = chapter_5::structs::Rectangle {
+        width: dbg!(30 * scale),
+        height: 50,
+    };
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        rect1.area()
+    );
+    println!("rect1 is {rect1:?}");
+    dbg!(&rect1);
+
+    if rect1.width() {
+        println!("The rectangle has a nonzero width; it is {}", rect1.width);
+    }
 }
