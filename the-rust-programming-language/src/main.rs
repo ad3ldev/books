@@ -1,6 +1,7 @@
 mod chapter_1;
 mod chapter_2;
 mod chapter_3;
+mod chapter_4;
 
 fn main() {
     chapter_1::hello::hello();
@@ -35,4 +36,10 @@ fn main() {
     chapter_3::control_flow::labeled_loops();
     chapter_3::control_flow::while_loops();
     chapter_3::control_flow::for_loops();
+
+    let s = String::from("hello world");
+
+    let word = chapter_4::slice::first_word(&s); // word will get the value 5
+
+    println!("{word}")
 }
