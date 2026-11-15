@@ -2,6 +2,7 @@ mod chapter_1;
 mod chapter_2;
 mod chapter_3;
 mod chapter_4;
+mod chapter_5;
 
 fn main() {
     chapter_1::hello::hello();
@@ -41,5 +42,15 @@ fn main() {
 
     let word = chapter_4::slice::first_word(&s); // word will get the value 5
 
-    println!("{word}")
+    println!("{word}");
+    let user1 = chapter_5::structs::build_user(
+        String::from("example@example.com"),
+        String::from("username"),
+    );
+    let _user2 = chapter_5::structs::User {
+        email: String::from("another@example.com"),
+        ..user1
+    };
+    let black = chapter_5::structs::Color(0, 0, 0);
+    let origin = chapter_5::structs::Point(0, 0, 0);
 }
