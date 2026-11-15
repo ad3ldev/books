@@ -18,4 +18,14 @@ fn main() {
     chapter_3::data_types::componund_types();
     chapter_3::data_types::array_types();
     chapter_3::numeric_operations::numeric_operations();
+    chapter_3::functions::another_function(5);
+    chapter_3::functions::print_labeled_measurement(5, 'h');
+    chapter_3::functions::statements_and_expressions();
+    let x = chapter_3::functions::five();
+
+    println!("The value of x is: {x}");
+
+    let x = chapter_3::functions::plus_one(5);
+
+    println!("The value of x is: {x}");
 }

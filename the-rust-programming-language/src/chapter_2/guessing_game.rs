@@ -4,7 +4,7 @@ use std::io;
 
 pub fn guess_the_number() {
     println!("Guess the number!");
-    let secret_number = rand::rng().random_range(1..=2);
+    let secret_number = rand::rng().random_range(1..=1);
 
     loop {
         println!("Please input your guess.");
