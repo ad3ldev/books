@@ -28,4 +28,11 @@ fn main() {
     let x = chapter_3::functions::plus_one(5);
 
     println!("The value of x is: {x}");
+
+    chapter_3::control_flow::if_condition();
+    chapter_3::control_flow::if_in_let();
+    chapter_3::control_flow::loops_loop();
+    chapter_3::control_flow::labeled_loops();
+    chapter_3::control_flow::while_loops();
+    chapter_3::control_flow::for_loops();
 }
