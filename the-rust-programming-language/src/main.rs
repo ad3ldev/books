@@ -3,6 +3,7 @@ mod chapter_2;
 mod chapter_3;
 mod chapter_4;
 mod chapter_5;
+mod chapter_6;
 
 fn main() {
     chapter_1::hello::hello();
