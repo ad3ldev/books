@@ -1,4 +1,7 @@
-use crate::chapter_7::front_of_house::eat_at_restaurant;
+use crate::{
+    chapter_7::front_of_house::eat_at_restaurant,
+    chapter_9::errors::{file_results, read_username_from_file},
+};
 
 mod chapter_1;
 mod chapter_2;
@@ -8,6 +11,7 @@ mod chapter_5;
 mod chapter_6;
 mod chapter_7;
 mod chapter_8;
+mod chapter_9;
 
 fn main() {
     chapter_1::hello::hello();
@@ -76,4 +80,7 @@ fn main() {
         println!("The rectangle has a nonzero width; it is {}", rect1.width);
     }
     eat_at_restaurant();
+    // panic_please();
+    file_results();
+    read_username_from_file();
 }
