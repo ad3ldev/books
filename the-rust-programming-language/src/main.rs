@@ -1,9 +1,12 @@
+use crate::chapter_7::front_of_house::eat_at_restaurant;
+
 mod chapter_1;
 mod chapter_2;
 mod chapter_3;
 mod chapter_4;
 mod chapter_5;
 mod chapter_6;
+mod chapter_7;
 
 fn main() {
     chapter_1::hello::hello();
@@ -71,4 +74,5 @@ fn main() {
     if rect1.width() {
         println!("The rectangle has a nonzero width; it is {}", rect1.width);
     }
+    eat_at_restaurant();
 }
