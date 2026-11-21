@@ -14,6 +14,7 @@ mod chapter_07;
 mod chapter_08;
 mod chapter_09;
 mod chapter_10;
+mod chapter_11;
 
 fn main() {
     chapter_01::hello::hello();
