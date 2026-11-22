@@ -1,7 +1,7 @@
-use crate::chapter_15::rc::rc_pointers;
+use crate::chapter_16::threading::*;
 
-mod chapter_15;
+mod chapter_16;
 
 fn main() {
-    rc_pointers();
+    mutexes_or_mutexi()
 }
