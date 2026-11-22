@@ -1,19 +1,31 @@
-use std::{env, process::exit};
+mod chapter_13;
+use std::{thread, time::Duration};
 
-use crate::chapter_12::lib::{Config, run};
-
-mod chapter_12;
+use crate::chapter_13::lib::*;
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
+    let store = Inventory {
+        shirts: vec![ShirtColor::Blue, ShirtColor::Red, ShirtColor::Blue],
+    };
 
-    let config = Config::new(&args).unwrap_or_else(|err| {
-        eprintln!("Problem parsing arguments: {err}");
-        exit(1);
-    });
+    let user_pref1 = Some(ShirtColor::Red);
+    let giveaway1 = store.giveaway(user_pref1);
+    println!(
+        "The user with preference {:?} gets {:?}",
+        user_pref1, giveaway1
+    );
 
-    if let Err(e) = run(config) {
-        eprintln!("Application error: {e}");
-        exit(1);
-    }
+    let user_pref2 = None;
+    let giveaway2 = store.giveaway(user_pref2);
+    println!(
+        "The user with preference {:?} gets {:?}",
+        user_pref2, giveaway2
+    );
+
+    let expensive_closure = |num: u32| -> u32 {
+        println!("calculating slowly...");
+        thread::sleep(Duration::from_secs(2));
+        num
+    };
+    borrow_fun();
 }
