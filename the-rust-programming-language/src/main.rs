@@ -1,14 +1,7 @@
-use crate::chapter_18::objects::Post;
+use crate::chapter_19::patterns::run;
 
-mod chapter_18;
+mod chapter_19;
 
 fn main() {
-    let mut post = Post::new();
-
-    post.add_text("I ate a salad for lunch today");
-
-    let post = post.request_review();
-
-    let post = post.approve();
-    assert_eq!("I ate a salad for lunch today", post.content());
+    run();
 }
