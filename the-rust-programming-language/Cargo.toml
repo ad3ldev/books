@@ -8,6 +8,3 @@ opt-level = 0
 
 [profile.release]
 opt-level = 3
-
-[dependencies]
-trpl = "0.3.0"
