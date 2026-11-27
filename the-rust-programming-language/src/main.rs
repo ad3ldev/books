@@ -1,7 +1,7 @@
-use crate::chapter_16::threading::*;
+use crate::chapter_17::all::run;
 
-mod chapter_16;
+mod chapter_17;
 
 fn main() {
-    mutexes_or_mutexi()
+    run();
 }
